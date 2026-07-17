@@ -1,0 +1,95 @@
+.modern-report {
+  background: white;
+
+  border-radius: 28px;
+
+  overflow: hidden;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+.modern-hero {
+  padding: 60px;
+
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+
+  color: white;
+}
+
+.modern-tag {
+  letter-spacing: 3px;
+
+  opacity: 0.8;
+
+  font-size: 0.8rem;
+
+  margin-bottom: 14px;
+}
+
+.modern-cards {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+
+  padding: 35px;
+}
+
+.modern-card {
+  background: #f8fafc;
+
+  padding: 22px;
+
+  border-radius: 18px;
+}
+
+.modern-card span {
+  color: #6b7280;
+
+  font-size: 0.85rem;
+}
+
+.achievement-box {
+  margin: 0 35px;
+
+  padding: 28px;
+
+  background: #eef4ff;
+
+  border-radius: 18px;
+
+  line-height: 1.9;
+}
+
+.timeline {
+  padding: 35px;
+}
+
+.timeline-item {
+  margin-top: 18px;
+
+  padding: 18px;
+
+  background: #f9fafb;
+
+  border-left: 5px solid #2563eb;
+
+  border-radius: 10px;
+}
+
+.modern-footer {
+  padding: 35px;
+
+  color: #6b7280;
+}
+
+@media (max-width: 768px) {
+  .modern-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .modern-hero {
+    padding: 35px;
+  }
+}

@@ -1,0 +1,62 @@
+.home {
+  min-height: 100vh;
+  background: #f5f7fb;
+  padding: 40px;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+@media (max-width: 960px) {
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+  .home {
+    padding: 20px;
+  }
+}
+
+.preview-area {
+  transition: 45s ease;
+  animation: fadeUp 0.45 ease;
+}
+
+.preview-switcher {
+  display: flex;
+  gap: 12px;
+  margin: 25px 0 35px;
+}
+
+.preview-switcher button {
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  background: #e5e7eb;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+.preview-switcher button:hover {
+  transform: translateY(-2px);
+}
+
+.preview-switcher button.active {
+  background: #2563eb;
+  color: white;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

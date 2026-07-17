@@ -1,0 +1,55 @@
+.minimal-letter {
+  max-width: 850px;
+
+  margin: auto;
+
+  background: white;
+
+  padding: 60px;
+
+  border: 1px solid #d1d5db;
+
+  font-family: Georgia, serif;
+
+  color: #111827;
+}
+
+.minimal-letter h1 {
+  margin-bottom: 35px;
+}
+
+.minimal-info {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 30px;
+
+  margin-bottom: 40px;
+}
+
+.minimal-summary {
+  line-height: 2;
+
+  margin-bottom: 60px;
+}
+
+.minimal-signature {
+  width: 220px;
+
+  height: 1px;
+
+  background: black;
+
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .minimal-info {
+    grid-template-columns: 1fr;
+  }
+
+  .minimal-letter {
+    padding: 30px;
+  }
+}

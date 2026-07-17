@@ -1,0 +1,95 @@
+.letter-paper {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 60px;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.08),
+    0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid #ececec;
+  transition: 0.3s ease;
+}
+
+.letter-header {
+  margin-bottom: 40px;
+}
+
+.letter-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.letter-subtitle {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.letter-section {
+  margin: 28px 0;
+}
+
+.letter-label {
+  display: block;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.letter-value {
+  color: #111827;
+  line-height: 1.8;
+}
+
+.progress-box {
+  margin-top: 20px;
+  padding: 22px;
+  border-radius: 14px;
+  background: #f8fafc;
+  border-left: 5px solid #2563eb;
+}
+
+.signature {
+  margin-top: 70px;
+}
+
+.signature-line {
+  width: 240px;
+  height: 1px;
+  background: #111827;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 768px) {
+  .letter-paper {
+    padding: 28px;
+  }
+}
+/* ===========================
+   TEMPLATE THEMES
+=========================== */
+
+.letter-paper.academic {
+  border-top: 8px solid #1d4ed8;
+}
+
+.letter-paper.professional {
+  border-top: 8px solid #111827;
+}
+
+.letter-paper.modern {
+  border-top: 8px solid #8b5cf6;
+
+  border-radius: 30px;
+}
+
+.letter-paper.minimal {
+  border-top: 3px solid #d1d5db;
+
+  box-shadow: none;
+
+  border-radius: 8px;
+}

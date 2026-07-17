@@ -1,65 +1,104 @@
-import Image from "next/image";
+"use client";
+
+import { useState } from "react";
+import Editor from "./components/Editor";
+import ProgressPage from "./components/ProgressPage";
+import ThemeSwitcher from "./components/ThemeSwitcher";
+import "./style/Home.css";
+import ProgressEmail from "./components/ProgressEmail";
+import ProgressDocument from "./components/ProgressDocument";
+import ExportCenter from "./components/ExportCenter";
+import TemplateSelector from "./components/TemplateSelector";
+import CodePanel from "./components/CodePanel";
 
 export default function Home() {
+  const [previewMode, setPreviewMode] = useState<"email" | "document" | "page">(
+    "page",
+  );
+  const [template, setTemplate] = useState<
+    "academic" | "professional" | "modern" | "minimal"
+  >("academic");
+  const [data, setData] = useState({
+    studentName: "John Doe",
+    course: "Frontend Development",
+    instructor: "Jane Smith",
+    progress:
+      "Excellent progress throughout the current learning phase. Assignments are completed on time and practical understanding continues to improve.",
+  });
+
+  const generatedHTML = `<h1>${data.studentName}</h1>
+  <p>${data.progress}</p>`;
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+    <main className="home">
+      <ThemeSwitcher />
+      <TemplateSelector template={template} setTemplate={setTemplate} />
+
+      <div className="preview-switcher">
+        <button
+          onClick={() => setPreviewMode("page")}
+          className={previewMode === "page" ? "active" : ""}
+        >
+          🌐 Web
+        </button>
+
+        <button
+          onClick={() => setPreviewMode("email")}
+          className={previewMode === "email" ? "active" : ""}
+        >
+          📧 Email
+        </button>
+
+        <button
+          onClick={() => setPreviewMode("document")}
+          className={previewMode === "document" ? "active" : ""}
+        >
+          📄 Document
+        </button>
+      </div>
+
+      <div className="workspace">
+        <Editor data={data} setData={setData} />
+
+        <div className="preview-area" key={`${previewMode}-${template}`}>
+          {previewMode === "page" && (
+            <ProgressPage
+              studentName={data.studentName}
+              course={data.course}
+              instructor={data.instructor}
+              progress={data.progress}
+              date={new Date().toLocaleDateString()}
+              template={template}
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          )}
+
+          {previewMode === "email" && (
+            <ProgressEmail
+              studentName={data.studentName}
+              course={data.course}
+              instructor={data.instructor}
+              progress={data.progress}
+              date={new Date().toLocaleDateString()}
+              template={template}
+            />
+          )}
+
+          {previewMode === "document" && (
+            <ProgressDocument
+              studentName={data.studentName}
+              course={data.course}
+              instructor={data.instructor}
+              progress={data.progress}
+              date={new Date().toLocaleDateString()}
+              template={template}
+            />
+          )}
         </div>
-      </main>
-    </div>
+      </div>
+
+      <ExportCenter data={data} />
+
+      <CodePanel html={generatedHTML} />
+    </main>
   );
 }

@@ -1,5 +1,5 @@
 import { Page } from "@unlayer/react-elements";
-import TemplateRenderer from "./TemplateRenderer";
+import TemplateRenderer from "../renderers/TemplateRenderer";
 
 type Props = {
   studentName: string;

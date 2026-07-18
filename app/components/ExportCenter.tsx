@@ -26,41 +26,33 @@ export default function ExportCenter({ data }: ExportCenterProps) {
   const html = generateHTML({ ...data, date: new Date().toLocaleDateString() });
 
   return (
-    <div className="export-center">
-      <h2>Export Center</h2>
+    <div className="export-grid">
+      <button>
+        📧
+        <span>Export Email</span>
+      </button>
 
-      <p>Export your progress letter in multiple professional formats.</p>
+      <button>
+        📄
+        <span>Export Document</span>
+      </button>
 
-      <div className="export-grid">
-        <button>
-          📧
-          <span>Export Email</span>
-        </button>
+      <button onClick={() => copyToClipboard(html)}>
+        📋
+        <span>Copy HTML</span>
+      </button>
 
-        <button>
-          📄
-          <span>Export Document</span>
-        </button>
+      <button onClick={exportJSON}>
+        🧩
+        <span>Download JSON</span>
+      </button>
 
-        <button onClick={() => copyToClipboard(html)}>
-          📋
-          <span>Copy HTML</span>
-        </button>
-
-        <button onClick={exportJSON}>
-          🧩
-          <span>Download JSON</span>
-        </button>
-
-        <button
-          onClick={() =>
-            downloadFile("progress-letter.html", html, "text/html")
-          }
-        >
-          🌏
-          <span>Export HTML</span>
-        </button>
-      </div>
+      <button
+        onClick={() => downloadFile("progress-letter.html", html, "text/html")}
+      >
+        🌏
+        <span>Export HTML</span>
+      </button>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import { Email } from "@unlayer/react-elements";
-import TemplateRenderer from "../renderers/TemplateRenderer";
+import EmailRenderer from "../renderers/EmailRenderer";
 
 type Props = {
   studentName: string;
@@ -13,7 +13,7 @@ type Props = {
 export default function ProgressEmail(props: Props) {
   return (
     <Email>
-      <TemplateRenderer {...props} />
+      <EmailRenderer {...props} />
     </Email>
   );
 }

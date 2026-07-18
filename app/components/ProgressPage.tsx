@@ -1,5 +1,5 @@
 import { Page } from "@unlayer/react-elements";
-import TemplateRenderer from "../renderers/TemplateRenderer";
+import PageRenderer from "../renderers/PageRenderer";
 
 type Props = {
   studentName: string;
@@ -13,7 +13,7 @@ type Props = {
 export default function ProgressPage(props: Props) {
   return (
     <Page>
-      <TemplateRenderer {...props} />
+      <PageRenderer {...props} />
     </Page>
   );
 }

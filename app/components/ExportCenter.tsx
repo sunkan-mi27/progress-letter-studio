@@ -1,7 +1,10 @@
 "use client";
 
 import "../style/ExportCenter.css";
-import { downloadFile } from "../lib/export";
+import { downloadFile } from "../lib/downloadFile";
+import { copyToClipboard } from "../lib/copyToClipboard";
+import { generateHTML } from "../lib/generateHTML";
+
 type ExportCenterProps = {
   data: {
     studentName: string;
@@ -20,6 +23,8 @@ export default function ExportCenter({ data }: ExportCenterProps) {
     );
   }
 
+  const html = generateHTML({ ...data, date: new Date().toLocaleDateString() });
+
   return (
     <div className="export-center">
       <h2>Export Center</h2>
@@ -37,7 +42,7 @@ export default function ExportCenter({ data }: ExportCenterProps) {
           <span>Export Document</span>
         </button>
 
-        <button>
+        <button onClick={() => copyToClipboard(html)}>
           📋
           <span>Copy HTML</span>
         </button>
@@ -45,6 +50,15 @@ export default function ExportCenter({ data }: ExportCenterProps) {
         <button onClick={exportJSON}>
           🧩
           <span>Download JSON</span>
+        </button>
+
+        <button
+          onClick={() =>
+            downloadFile("progress-letter.html", html, "text/html")
+          }
+        >
+          🌏
+          <span>Export HTML</span>
         </button>
       </div>
     </div>

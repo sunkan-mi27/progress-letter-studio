@@ -2,14 +2,15 @@
 
 import { useState } from "react";
 import Editor from "./components/Editor";
-import ProgressPage from "./components/ProgressPage";
+import PageRenderer from "./renderers/PageRenderer";
+import EmailRenderer from "./renderers/EmailRenderer";
+import DocumentRenderer from "./renderers/DocumentRenderer";
 import ThemeSwitcher from "./components/ThemeSwitcher";
 import "./style/Home.css";
-import ProgressEmail from "./components/ProgressEmail";
-import ProgressDocument from "./components/ProgressDocument";
 import ExportCenter from "./components/ExportCenter";
 import TemplateSelector from "./components/TemplateSelector";
 import CodePanel from "./components/CodePanel";
+import { generateHTML } from "./lib/generateHTML";
 
 export default function Home() {
   const [previewMode, setPreviewMode] = useState<"email" | "document" | "page">(
@@ -26,8 +27,10 @@ export default function Home() {
       "Excellent progress throughout the current learning phase. Assignments are completed on time and practical understanding continues to improve.",
   });
 
-  const generatedHTML = `<h1>${data.studentName}</h1>
-  <p>${data.progress}</p>`;
+  const generatedHTML = generateHTML({
+    ...data,
+    date: new Date().toLocaleDateString(),
+  });
 
   return (
     <main className="home">
@@ -62,7 +65,7 @@ export default function Home() {
 
         <div className="preview-area" key={`${previewMode}-${template}`}>
           {previewMode === "page" && (
-            <ProgressPage
+            <PageRenderer
               studentName={data.studentName}
               course={data.course}
               instructor={data.instructor}
@@ -73,7 +76,7 @@ export default function Home() {
           )}
 
           {previewMode === "email" && (
-            <ProgressEmail
+            <EmailRenderer
               studentName={data.studentName}
               course={data.course}
               instructor={data.instructor}
@@ -84,7 +87,7 @@ export default function Home() {
           )}
 
           {previewMode === "document" && (
-            <ProgressDocument
+            <DocumentRenderer
               studentName={data.studentName}
               course={data.course}
               instructor={data.instructor}

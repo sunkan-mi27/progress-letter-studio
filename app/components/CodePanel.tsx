@@ -1,6 +1,6 @@
 "use client";
 
-import "../styles/CodePanel.css";
+import "../style/CodePanel.css";
 
 type Props = {
   html: string;

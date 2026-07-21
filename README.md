@@ -116,7 +116,8 @@ http://localhost:3000
 ## 📸 Screenshots
 
 ## Home
-(public/screenshots/home.png)
+<img width="1080" height="2167" alt="image" src="https://github.com/user-attachments/assets/6b422118-d91a-47b1-b994-a6fd24776b51" />
+
 
 ## Page Renderer
 <img width="1080" height="2342" alt="image" src="https://github.com/user-attachments/assets/19162ed7-8341-458c-882c-112cd43d361d" />

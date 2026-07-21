@@ -1,18 +1,49 @@
 .template-selector {
-  margin: 24px 0;
+  margin: 2rem 0;
 }
 
 .template-selector label {
   display: block;
-  margin-bottom: 8px;
-  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
 }
 
 .template-selector select {
   width: 100%;
-  padding: 14px;
-  border-radius: 12px;
-  border: 1px solid #d1d5db;
+  padding: 16px 18px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  color: var(--text);
   font-size: 15px;
-  background: white;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+}
+
+.template-selector select:hover {
+  border-color: rgba(34, 197, 94, 0.35);
+}
+
+.template-selector select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.15);
+}
+
+.template-selector option {
+  background: var(--surface);
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .template-selector {
+    margin: 1.5rem 0;
+  }
 }

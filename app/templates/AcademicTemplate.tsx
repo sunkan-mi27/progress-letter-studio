@@ -16,51 +16,76 @@ export default function AcademicTemplate({
   date,
 }: AcademicTemplateProps) {
   return (
-    <div className="academic-letter">
+    <article className="academic-letter">
       <header className="academic-header">
-        <div className="academic-logo">🎓</div>
+        <div className="academic-brand">
+          <div className="academic-logo">🎓</div>
 
-        <div>
-          <h1>Academic Progress Letter</h1>
-          <p>Progress Letter Studio University</p>
+          <div>
+            <h1>Progress Letter Studio University</h1>
+
+            <p>Office of Academic Affairs</p>
+          </div>
+        </div>
+
+        <div className="academic-date">
+          <span>Date Issued</span>
+          <strong>{date}</strong>
         </div>
       </header>
 
-      <hr />
+      <div className="academic-divider"></div>
 
-      <section className="student-details">
-        <div>
-          <strong>Student</strong>
-          <p>{studentName}</p>
+      <section className="letter-intro">
+        <h2>Academic Progress Report</h2>
+
+        <p>
+          This official document summarizes the student's academic performance
+          and instructor evaluation for the current course.
+        </p>
+      </section>
+
+      <section className="student-grid">
+        <div className="detail-card">
+          <span>Student</span>
+          <strong>{studentName}</strong>
         </div>
 
-        <div>
-          <strong>Course</strong>
-          <p>{course}</p>
+        <div className="detail-card">
+          <span>Course</span>
+          <strong>{course}</strong>
         </div>
 
-        <div>
-          <strong>Instructor</strong>
-          <p>{instructor}</p>
+        <div className="detail-card">
+          <span>Instructor</span>
+          <strong>{instructor}</strong>
         </div>
 
-        <div>
-          <strong>Date</strong>
-          <p>{date}</p>
+        <div className="detail-card">
+          <span>Status</span>
+          <strong>In Progress</strong>
         </div>
       </section>
 
-      <section className="academic-summary">
-        <h2>Instructor Evaluation</h2>
+      <section className="evaluation">
+        <h3>Instructor Evaluation</h3>
 
         <p>{progress}</p>
       </section>
 
       <footer className="academic-footer">
-        <div className="signature-line"></div>
+        <div>
+          <div className="signature-line"></div>
 
-        <p>Dean of Academic Affairs</p>
+          <p>
+            <strong>Dean of Academic Affairs</strong>
+          </p>
+
+          <p>Progress Letter Studio University</p>
+        </div>
+
+        <div className="official-stamp">VERIFIED</div>
       </footer>
-    </div>
+    </article>
   );
 }

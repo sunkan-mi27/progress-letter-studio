@@ -3,57 +3,70 @@
   max-width: 850px;
   margin: 0 auto;
   background: #ffffff;
-  border-radius: 20px;
-  padding: 60px;
+  border-radius: 24px;
+  padding: 64px;
+  border: 1px solid #e5e7eb;
   box-shadow:
-    0 20px 60px rgba(0, 0, 0, 0.08),
-    0 1px 3px rgba(0, 0, 0, 0.05);
-  border: 1px solid #ececec;
-  transition: 0.3s ease;
+    0 30px 70px rgba(15, 23, 42, 0.08),
+    0 8px 24px rgba(15, 23, 42, 0.05);
+
+  transition: all 0.35s ease;
+}
+
+.letter-paper:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 35px 90px rgba(15, 23, 42, 0.12),
+    0 10px 30px rgba(15, 23, 42, 0.08);
 }
 
 .letter-header {
-  margin-bottom: 40px;
+  margin-bottom: 48px;
 }
 
 .letter-title {
-  font-size: 2rem;
+  font-size: 2.15rem;
   font-weight: 700;
   color: #111827;
   margin-bottom: 10px;
+  letter-spacing: -0.5px;
 }
 
 .letter-subtitle {
   color: #6b7280;
-  font-size: 0.95rem;
+  font-size: 0.96rem;
 }
 
 .letter-section {
-  margin: 28px 0;
+  margin: 30px 0;
 }
 
 .letter-label {
   display: block;
-  font-weight: 600;
-  color: #374151;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+  color: #4b5563;
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
 }
 
 .letter-value {
   color: #111827;
-  line-height: 1.8;
+  line-height: 1.85;
+  font-size: 1rem;
 }
 
 .progress-box {
-  margin-top: 20px;
-  padding: 22px;
-  border-radius: 14px;
+  margin-top: 24px;
+  padding: 26px;
+  border-radius: 18px;
   background: #f8fafc;
-  border-left: 5px solid #2563eb;
+  border-left: 6px solid var(--accent);
 }
 
 .signature {
-  margin-top: 70px;
+  margin-top: 80px;
 }
 
 .signature-line {
@@ -63,33 +76,32 @@
   margin-bottom: 12px;
 }
 
-@media (max-width: 768px) {
-  .letter-paper {
-    padding: 28px;
-  }
-}
-/* ===========================
-   TEMPLATE THEMES
-=========================== */
-
+/* ---------- TEMPLATE THEMES ---------- */
 .letter-paper.academic {
-  border-top: 8px solid #1d4ed8;
+  border-top: 8px solid #2563eb;
 }
-
 .letter-paper.professional {
   border-top: 8px solid #111827;
 }
 
 .letter-paper.modern {
   border-top: 8px solid #8b5cf6;
-
   border-radius: 30px;
 }
 
 .letter-paper.minimal {
   border-top: 3px solid #d1d5db;
-
+  border-radius: 10px;
   box-shadow: none;
+}
 
-  border-radius: 8px;
+@media (max-width: 768px) {
+  .letter-paper {
+    padding: 34px 28px;
+    border-radius: 20px;
+  }
+
+  .letter-title {
+    font-size: 1.7rem;
+  }
 }

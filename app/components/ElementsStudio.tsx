@@ -1,3 +1,5 @@
+import "../style/ElementsStudio.css";
+
 type Props = {
   previewMode: "page" | "email" | "document" | "compare";
   setPreviewMode: React.Dispatch<

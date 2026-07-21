@@ -16,30 +16,36 @@ export default function MinimalTemplate({
   date,
 }: MinimalTemplateProps) {
   return (
-    <div className="minimal-letter">
-      <h1>Progress Letter</h1>
+    <article className="minimal-letter">
+      <header className="minimal-header">
+        <p className="minimal-brand">Progress Letter Studio</p>
 
-      <div className="minimal-info">
+        <h1>Progress Letter</h1>
+
+        <span>{date}</span>
+      </header>
+
+      <section className="minimal-grid">
         <div>
-          <strong>Student</strong>
+          <label>Student</label>
           <p>{studentName}</p>
         </div>
 
         <div>
-          <strong>Course</strong>
+          <label>Course</label>
           <p>{course}</p>
         </div>
 
         <div>
-          <strong>Instructor</strong>
+          <label>Instructor</label>
           <p>{instructor}</p>
         </div>
 
         <div>
-          <strong>Date</strong>
-          <p>{date}</p>
+          <label>Status</label>
+          <p>Completed</p>
         </div>
-      </div>
+      </section>
 
       <section className="minimal-summary">
         <h2>Summary</h2>
@@ -47,11 +53,15 @@ export default function MinimalTemplate({
         <p>{progress}</p>
       </section>
 
-      <footer>
-        <div className="minimal-signature"></div>
+      <footer className="minimal-footer">
+        <div>
+          <div className="minimal-signature"></div>
 
-        <p>Authorized Signature</p>
+          <span>Authorized Signature</span>
+        </div>
+
+        <p>Generated with Progress Letter Studio</p>
       </footer>
-    </div>
+    </article>
   );
 }

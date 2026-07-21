@@ -25,9 +25,9 @@ export function RendererProvider({ children }: { children: React.ReactNode }) {
   const [template, setTemplate] = useState<Template>("academic");
 
   const [data, setData] = useState({
-    studentName: "John Doe",
-    course: "Frontend Development",
-    instructor: "Jane Smith",
+    studentName: "Ibrahim Sunkanmi",
+    course: "Full-Stack Developer",
+    instructor: "Robert Pettit",
     progress:
       "Excellent progress throughout the current learning phase. Assignments are completed on time and practical understanding continues to improve.",
   });

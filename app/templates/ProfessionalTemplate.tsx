@@ -16,66 +16,82 @@ export default function ProfessionalTemplate({
   date,
 }: ProfessionalTemplateProps) {
   return (
-    <div className="professional-report">
+    <article className="professional-report">
       <header className="professional-header">
         <div>
-          <p className="company-name">PROGRESS LETTER STUDIO</p>
-          <h1>Employee Performance Report</h1>
+          <span className="company-name">PROGRESS LETTER STUDIO INC.</span>
+
+          <h1>Employee Performance Review</h1>
+
+          <p>Human Resources · Annual Performance Assessment</p>
         </div>
 
-        <div className="report-badge">Performance</div>
+        <div className="report-status">APPROVED</div>
       </header>
 
-      <section className="employee-card">
-        <div>
+      <section className="employee-grid">
+        <div className="employee-item">
           <span>Employee</span>
-          <h3>{studentName}</h3>
+          <strong>{studentName}</strong>
         </div>
 
-        <div>
+        <div className="employee-item">
           <span>Department</span>
-          <h3>{course}</h3>
+          <strong>{course}</strong>
         </div>
 
-        <div>
+        <div className="employee-item">
           <span>Manager</span>
-          <h3>{instructor}</h3>
+          <strong>{instructor}</strong>
         </div>
 
-        <div>
+        <div className="employee-item">
           <span>Review Date</span>
-          <h3>{date}</h3>
+          <strong>{date}</strong>
         </div>
       </section>
 
-      <section className="performance-summary">
-        <h2>Performance Summary</h2>
+      <section className="executive-summary">
+        <h2>Executive Summary</h2>
 
         <p>{progress}</p>
       </section>
 
-      <section className="performance-score">
-        <div>
-          <h3>Productivity</h3>
+      <section className="metrics">
+        <div className="metric">
+          <span>Productivity</span>
           <strong>92%</strong>
         </div>
 
-        <div>
-          <h3>Teamwork</h3>
+        <div className="metric">
+          <span>Teamwork</span>
           <strong>95%</strong>
         </div>
 
-        <div>
-          <h3>Attendance</h3>
+        <div className="metric">
+          <span>Attendance</span>
           <strong>99%</strong>
+        </div>
+
+        <div className="metric">
+          <span>Overall Rating</span>
+          <strong>Excellent</strong>
         </div>
       </section>
 
       <footer className="professional-footer">
-        <div className="signature"></div>
+        <div>
+          <div className="signature-line"></div>
 
-        <p>HR Manager Approval</p>
+          <p>
+            <strong>HR Director</strong>
+          </p>
+
+          <p>Progress Letter Studio Inc.</p>
+        </div>
+
+        <div className="approval-box">VERIFIED</div>
       </footer>
-    </div>
+    </article>
   );
 }

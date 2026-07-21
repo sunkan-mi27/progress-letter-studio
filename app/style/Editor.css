@@ -15,38 +15,35 @@
 .editor-heading h2 {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #ffffff;
   letter-spacing: -0.5px;
+  color: var(--text);
 }
 
 .editor-heading p {
-  color: #9ca3af;
+  color: var(--text-secondary);
   font-size: 0.98rem;
   line-height: 1.7;
   max-width: 550px;
 }
 
-/* ---------- EDITOR CARD ---------- */
-
+/* ---------- CARD ---------- */
 .editor {
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--glass);
   backdrop-filter: blur(18px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid var(--border);
   border-radius: 24px;
   padding: 2rem;
+  box-shadow: var(--shadow);
   transition: all 0.35s ease;
-  box-shadow:
-    0 16px 40px rgba(0, 0, 0, 0.25),
-    inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
 .editor:hover {
-  border-color: rgba(34, 197, 94, 0.3);
+  border-color: rgba(34, 197, 94, 0.35);
   transform: translateY(-2px);
 }
 
 /* ---------- GROUP ---------- */
-
 .editor-group {
   display: flex;
   flex-direction: column;
@@ -59,51 +56,43 @@
 }
 
 /* ---------- LABEL ---------- */
-
 .editor-group label {
-  color: #d1d5db;
+  color: var(--text);
   font-size: 0.92rem;
   font-weight: 600;
   letter-spacing: 0.3px;
 }
 
-/* ---------- INPUTS ---------- */
-
+/* ----------INPUTS ---------- */
 .editor input,
 .editor textarea {
   width: 100%;
   padding: 15px 18px;
   border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.03);
-  color: #ffffff;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
   font-size: 15px;
   line-height: 1.6;
   outline: none;
   transition: all 0.3s ease;
 }
 
-/* ---------- PLACEHOLDER ---------- */
-
 .editor input::placeholder,
 .editor textarea::placeholder {
-  color: #6b7280;
+  color: var(--text-secondary);
 }
-
-/* ---------- FOCUS ---------- */
 
 .editor input:focus,
 .editor textarea:focus {
-  border-color: #22c55e;
+  border-color: var(--accent);
   box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.18);
   transform: translateY(-1px);
 }
 
-/* ---------- TEXTAREA ---------- */
-
 .editor textarea {
-  min-height: 190px;
   resize: vertical;
+  min-height: 190px;
   line-height: 1.8;
 }
 
@@ -112,13 +101,11 @@
 .editor-footer {
   margin-top: 2rem;
   padding-top: 1.3rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-
+  border-top: 1px solid var(--border);
   display: flex;
   align-items: center;
   gap: 0.6rem;
-
-  color: #9ca3af;
+  color: var(--text-secondary);
   font-size: 0.92rem;
 }
 
@@ -140,8 +127,8 @@
 
   .editor input,
   .editor textarea {
-    font-size: 14px;
     padding: 14px 16px;
+    font-size: 14px;
   }
 
   .editor textarea {

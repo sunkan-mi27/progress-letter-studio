@@ -132,7 +132,8 @@ http://localhost:3000
 
 
 ## Light Mode
-(public/screenshots/light-mode-view.png)
+<img width="1080" height="2313" alt="image" src="https://github.com/user-attachments/assets/4f2285f9-a995-48d3-8c20-65ae7f60016d" />
+
 ---
 
 # 👨‍💻 Author

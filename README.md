@@ -128,7 +128,8 @@ http://localhost:3000
 
 
 ## Document Renderer
-(public/screenshots/document-renderer.png)
+<img width="1080" height="2408" alt="image" src="https://github.com/user-attachments/assets/6c99b12a-ef91-4884-b8bd-c50648b6a31b" />
+
 
 ## Light Mode
 (public/screenshots/light-mode-view.png)

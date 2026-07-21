@@ -1,0 +1,76 @@
+.browser-frame {
+  width: 100%;
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+}
+
+.browser-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: #111827;
+}
+
+.browser-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.browser-title strong {
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.browser-title span {
+  color: #94a3b8;
+  font-size: 0.75rem;
+}
+
+.browser-url {
+  color: #9ca3af;
+  font-size: 0.82rem;
+}
+
+.browser-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #22c55e;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.live-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+}
+
+.browser-body {
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+  background: #0b1120;
+}
+
+@media (max-width: 900px) {
+  .browser-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .browser-body {
+    padding: 16px;
+  }
+
+  .browser-url {
+    word-break: break-all;
+  }
+}

@@ -1,36 +1,150 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📄 Progress Letter Studio
 
-## Getting Started
+> Build beautiful, reusable Progress Letters powered by **@unlayer/react-elements**.
 
-First, run the development server:
+## 🌐 Live Demo
+
+https://progress-letter-studio.vercel.app
+
+---
+
+## 📦 GitHub Repository
+
+https://github.com/sunkan-mi27/progress-letter-studio
+
+---
+
+## 📖 Overview
+
+Progress Letter Studio is a modern web application that allows users to create, edit, preview, and export professional progress letters from a single source of data.
+
+Built with **Next.js**, **TypeScript**, and **@unlayer/react-elements**, the application demonstrates how one dataset can be rendered into multiple presentation formats while maintaining a clean developer experience.
+
+---
+
+# ✨ Features
+
+- 🌐 Web Page Renderer
+- 📧 Email Renderer
+- 📄 Document Renderer
+- 🔍 Compare Multiple Renderers
+- 🎓 Academic Template
+- 💼 Professional Template
+- 🚀 Modern Template
+- 📄 Minimal Template
+- 🌙 Light & Dark Mode
+- 📝 Live Progress Letter Editor
+- 💻 Live Generated HTML
+- 📋 Copy HTML
+- 📦 Export Center
+- ⚡ Responsive Design
+
+---
+
+# 🛠 Tech Stack
+
+- Next.js 16
+- React 19
+- TypeScript
+- @unlayer/react-elements
+- CSS
+- PrismJS
+- React Syntax Highlighter
+
+---
+
+# 🎯 Built with React Elements
+
+The core idea behind Progress Letter Studio is demonstrating the flexibility of **@unlayer/react-elements**.
+
+The application renders the same content into multiple output experiences:
+
+- 🌐 Interactive Web Page
+- 📧 Email Layout
+- 📄 Printable Document
+
+Each renderer shares the same data while providing a unique presentation optimized for its specific use case.
+
+This showcases the power of reusable rendering with React Elements.
+
+---
+
+# 📂 Project Structure
+
+```
+app/
+components/
+context/
+lib/
+renderers/
+style/
+templates/
+types/
+public/
+```
+
+---
+
+# 🚀 Getting Started
+
+Clone the repository
+
+```bash
+git clone https://github.com/sunkan-mi27/progress-letter-studio.git
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📸 Screenshots
 
-To learn more about Next.js, take a look at the following resources:
+## Home
+(public/screenshots/home.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Page Renderer
+(public/screenshots/page-renderer.png)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Email Renderer
+(public/screenshots/email-renderer.png)
 
-## Deploy on Vercel
+## Document Renderer
+(public/screenshots/document-renderer.png)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Light Mode
+(public/screenshots/light-mode-view.png)
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# 👨‍💻 Author
+
+**Olasunkanmi Ibrahim ✍️🏾**
+
+Full Stack Developer
+
+GitHub:
+https://github.com/sunkan-mi27
+
+Portfolio:
+https://sunkanmii-dev.netlify.app
+
+---
+
+# 📜 License
+
+This project was created as a competition submission and portfolio project.

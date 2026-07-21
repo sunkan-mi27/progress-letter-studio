@@ -123,8 +123,9 @@ http://localhost:3000
 <img width="1080" height="2342" alt="image" src="https://github.com/user-attachments/assets/19162ed7-8341-458c-882c-112cd43d361d" />
 
 
-## Email Renderer
-(public/screenshots/email-renderer.png)
+## Email Renderer 
+<img width="1080" height="2332" alt="image" src="https://github.com/user-attachments/assets/0b5db3a6-e80e-477d-9612-a29266e3f55f" />
+
 
 ## Document Renderer
 (public/screenshots/document-renderer.png)

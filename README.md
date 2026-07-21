@@ -119,7 +119,8 @@ http://localhost:3000
 (public/screenshots/home.png)
 
 ## Page Renderer
-(public/screenshots/page-renderer.png)
+<img width="1080" height="2342" alt="image" src="https://github.com/user-attachments/assets/19162ed7-8341-458c-882c-112cd43d361d" />
+
 
 ## Email Renderer
 (public/screenshots/email-renderer.png)
